@@ -17,7 +17,7 @@ List<ProjectUtils> hobbyProjectUtils = [
     ],
     title: 'Delivery Food App',
     subtitle: 'Practical Flutter designs for a food delivery application.',
-    link: ''
+    link: 'https://github.com/HaxRoss777/Shopping-App-'
   ),
   ProjectUtils(
     images: [
@@ -25,7 +25,7 @@ List<ProjectUtils> hobbyProjectUtils = [
     ],
     title: 'Shopping App',
     subtitle: 'Practical Flutter designs for a shopping application.',
-    link: ''
+    link: 'https://github.com/HaxRoss777/Shopping-UI-App-'
   ),
   ProjectUtils(
     images: [
@@ -35,7 +35,7 @@ List<ProjectUtils> hobbyProjectUtils = [
     ],
     title: 'Practice App',
     subtitle: 'Practical Flutter designs for various application interfaces.',
-    link: ''
+    link: 'https://github.com/HaxRoss777/Practice-App'
   ),
   ProjectUtils(
     images: [
@@ -44,7 +44,7 @@ List<ProjectUtils> hobbyProjectUtils = [
     ],
     title: 'News App',
     subtitle: 'News application with multiple categories.',
-    link: ''
+    link: 'https://github.com/HaxRoss777/News-App'
   ),
 ];
 
@@ -58,7 +58,7 @@ List<ProjectUtils> workProjectUtils = [
     ],
     title: 'FoodTopia App',
     subtitle: 'E-Commerce for a small food business.',
-    link: 'https://github.com/HaxRoss777/FoodTopia-App.git'
+    link: 'https://github.com/HaxRoss777/FoodTopia-E-Commerce-App'
   ),
   ProjectUtils(
     images: [
@@ -68,7 +68,7 @@ List<ProjectUtils> workProjectUtils = [
     ],
     title: 'Adijorda App',
     subtitle: 'An app in development by adijorda.com',
-    link: 'https://github.com/HaxRoss777/Adijorda-App.git'
+    link: 'https://github.com/HaxRoss777/Adijorda-App'
   ),
   ProjectUtils(
     images: [
