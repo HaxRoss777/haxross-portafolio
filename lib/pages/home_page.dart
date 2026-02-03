@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portafolio_app/constants/colors.dart';
 import 'package:portafolio_app/constants/size.dart';
 import 'package:portafolio_app/utils/project_utils.dart';
-import 'package:portafolio_app/widgets/contact_form_widget.dart';
+import 'package:portafolio_app/widgets/contact_form_widget.dart' hide CustomColor;
 import 'package:portafolio_app/widgets/drawer_mobile.dart';
 import 'package:portafolio_app/widgets/footer_widget.dart';
 import 'package:portafolio_app/widgets/header_desktop.dart';

@@ -31,62 +31,87 @@ class _FooterWidgetState extends State<FooterWidget> {
     }
   }
 
-  @override
-  Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final isMobile = screenWidth < 768;
+ @override
+Widget build(BuildContext context) {
+  final screenWidth = MediaQuery.of(context).size.width;
+  final isMobile = screenWidth < 768;
 
-    return Container(
-      padding: EdgeInsets.symmetric(
-        vertical: isMobile ? 30 : 40,
-        horizontal: isMobile ? 16 : 20,
-      ),
-      width: double.maxFinite,
-      decoration: BoxDecoration(
-        color: CustomColor.bgLight1,
-        border: Border(
-          top: BorderSide(
-            color: CustomColor.bgLight2,
-            width: 1,
-          ),
+  return Container(
+    padding: EdgeInsets.symmetric(
+      vertical: isMobile ? 30 : 40,
+      horizontal: isMobile ? 16 : 20,
+    ),
+    width: double.maxFinite,
+    decoration: BoxDecoration(
+      color: CustomColor.bgLight1,
+      border: Border(
+        top: BorderSide(
+          color: CustomColor.bgLight2,
+          width: 1,
         ),
       ),
-      child: Column(
-        children: [
-          Text(
-            '© 2026 Hayron Rosales. All rights reserved.',
-            style: TextStyle(
-              fontSize: isMobile ? 11 : 13,
-              color: CustomColor.whiteSecondary,
-              letterSpacing: 0.5,
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center, // centra todo horizontalmente
+      children: [
+        Text(
+          '© 2026 Hayron Rosales. All rights reserved.',
+          style: TextStyle(
+            fontSize: isMobile ? 11 : 13,
+            color: CustomColor.whiteSecondary,
+            letterSpacing: 0.5,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: 20),
+
+        // 🔹 ListTile reemplazado por Row centrado
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.phone,
+              color: CustomColor.yellowSecondary,
+              size: isMobile ? 16 : 18,
             ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _buildSocialButton(
-                'github',
-                Icons.hub,
-                'GitHub',
-                'https://github.com/HaxRoss777',
-                isMobile,
+            const SizedBox(width: 8),
+            Text(
+              '+5355450107',
+              style: TextStyle(
+                fontSize: isMobile ? 12 : 14,
+                color: CustomColor.whiteSecondary,
               ),
-              SizedBox(width: isMobile ? 16 : 20),
-              _buildSocialButton(
-                'linkedin',
-                Icons.business,
-                'LinkedIn',
-                'https://www.linkedin.com/in/hax-ross',
-                isMobile,
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
+            ),
+          ],
+        ),
+
+        const SizedBox(height: 20),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _buildSocialButton(
+              'github',
+              Icons.hub,
+              'GitHub',
+              'https://github.com/HaxRoss777',
+              isMobile,
+            ),
+            SizedBox(width: isMobile ? 16 : 20),
+            _buildSocialButton(
+              'linkedin',
+              Icons.business,
+              'LinkedIn',
+              'https://www.linkedin.com/in/hax-ross',
+              isMobile,
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
+}
+
 
   Widget _buildSocialButton(
     String key,
