@@ -501,43 +501,53 @@ class _ContactFormWidgetState extends State<ContactFormWidget> {
   }
 
   Widget _buildTextFormField({
-    required TextEditingController controller,
-    required String label,
-    required String hint,
-    int maxLines = 1,
-    TextInputType keyboardType = TextInputType.text,
-    String? Function(String?)? validator,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-            color: CustomColor.whitePrimary,
-          ),
+  required TextEditingController controller,
+  required String label,
+  required String hint,
+  int maxLines = 1,
+  TextInputType keyboardType = TextInputType.text,
+  String? Function(String?)? validator,
+}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        label,
+        style: const TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+          color: CustomColor.whitePrimary,
         ),
-        const SizedBox(height: 8),
-        TextFormField(
-          controller: controller,
-          maxLines: maxLines,
-          keyboardType: keyboardType,
-          validator: validator,
-          style: const TextStyle(color: CustomColor.whitePrimary, fontSize: 14),
-          decoration: InputDecoration(
-            hintText: hint,
-            hintStyle: const TextStyle(color: CustomColor.whiteSecondary, fontSize: 14),
-            filled: true,
-            fillColor: CustomColor.bgLight2,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-              borderSide: const BorderSide(color: CustomColor.bgLight1, width: 1),
-            ),
+      ),
+      const SizedBox(height: 8),
+      TextFormField(
+        controller: controller,
+        maxLines: maxLines,
+        keyboardType: keyboardType,
+        validator: validator,
+        style: const TextStyle(color: CustomColor.whitePrimary, fontSize: 14),
+        decoration: InputDecoration(
+          hintText: hint,
+          hintStyle: const TextStyle(color: CustomColor.whiteSecondary, fontSize: 14),
+          filled: true,
+          fillColor: CustomColor.bgLight2,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: const BorderSide(color: CustomColor.bgLight1, width: 1),
           ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: const BorderSide(color: CustomColor.bgLight1, width: 1),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: const BorderSide(color: CustomColor.yellowPrimary, width: 2),
+          ),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         ),
-      ],
-    );
-  }
+      ),
+    ],
+  );
+}
+
 }
